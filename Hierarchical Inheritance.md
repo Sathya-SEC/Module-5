@@ -1,40 +1,45 @@
-# Exp.No:25  
-## Hierarchical Inheritance
+# Ex.No 5C : Multiple Inheritance
+# AIM
+To write a Python program to get the name, attendance, and ID of a student and check if they are eligible for the next module using multiple inheritance. If attendance > 80, the student is eligible; otherwise, not eligible.
 
----
+# ALGORITHM
+1.Define the Student class.
 
-### AIM  
-To write a Python program to get the employee and doctor details and display them using hierarchical inheritance. Create a parent (base) class named `Details` and two child (derived) classes named `Employee` and `Doctor`.
+2.Inside the Student class, define the __init__ method (constructor). The __init__ method accepts two parameters: name and student_id.
+   Inside the __init__ method: Assign the value of name to self.name and student_id to self.student_id.
+   
+3.Define the get_student_info method inside the Student class
 
----
+4.This method should return a string formatted with self.name and self.student_id.
 
-### ALGORITHM
+5.Define the Attendance class, which inherits from the Student class.
 
-1. **Begin the program.**
-2. **Create a class Details** with an `__init__` method to initialize three attributes: `id`, `name`, and `gender`.
-3. **Define a method display_details()** to print the values of `id`, `name`, and `gender`.
-4. **Create a class Employee** that inherits from the `Details` class. 
-   - Add two additional attributes: `company` and `department`.
-   - Override the `display_details()` method to print the employee-specific attributes (`company` and `department`) along with the inherited details.
-5. **Create a class Doctor** that also inherits from the `Details` class. 
-   - Add two additional attributes: `hospital` and `department`.
-   - Override the `display_details()` method to print the doctor-specific attributes (`hospital` and `department`) along with the inherited details.
-6. **Accept input** for employee and doctor details.
-7. **Create objects of Employee and Doctor** using the input.
-8. **Call the `display_details()` method** for both objects to print the details.
-9. **Terminate the program.**
+6.Inside the Attendance class, define the __init__ method (constructor).
 
----
+7.The __init__ method accepts three parameters: name, student_id, and attendance.
 
-### PROGRAM
+8.Inside the __init__ method: Call the parent class constructor super().__init__(name, student_id) to initialize name and student_id. Assign the value of attendance to self.attendance.
+
+9.Define the check_eligibility method inside the Attendance class:
+
+10.Terminate the program.
+# PROGRAM
 ```
+# Reg.No-212222060232
+# Name-SATHYANARAYANAN S
+class Demo:
+    def __init__(self):
+        self.status = "Alive"
+    
+    def __del__(self):
+        print('The object no longer exists')
 
-
+obj = Demo()
+print(obj.status)
 ```
-
-### OUTPUT  
-
-(Output Screenshot)  
+# OUTPUT
+<img width="443" height="118" alt="image" src="https://github.com/user-attachments/assets/730ca834-1fcf-4b70-9d99-7760c7464cef" />
 
 
-### RESULT
+# RESULT
+Thus the program that demonstrates the use of a destructor method (del) in a class to indicate when an object is destroyed has been implemented and executed successfully.
